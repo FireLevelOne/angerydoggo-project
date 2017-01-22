@@ -1,0 +1,7 @@
+(function($){var closeFlagWindow=function(){if(PHP.get('nodimming')){PHP.get('nodimming').addClass('nodimming');}
+$('#flag_enclosure').remove();NiGhtBox.hide();NiGhtBox.restore();return false;};var commentIsRequired=function(){return $.rInArray(parseInt($('#flag_form input[type="radio"]:checked').val(),10),PHP.get('flag_types_needing_comment'));};var setUpCommentRequired=function(){if(commentIsRequired()){$('#flag_form span.required').show();$('#flag_comment').attr('required',true);}else{$('#flag_comment').removeAttr('required');$('#flag_form span.required').hide();}
+return true;};var watchFormPage=function(){var that;if($('#flag_comment').exists()){$('#flag_comment').on('focus blur',setUpCommentRequired).focus();}
+$('#flag_form input[type="radio"]').off('click').on('click',setUpCommentRequired);$('#flag_form').on('submit',function(){that=$(this);$(this).ajaxSubmit(function(response){alert("Your report has been submitted!");var element=$('#'+ PHP.get('flag_element_clicker'));if(response&&response.url){element.attr('href',response.url);}else if(element&&element.exists()){element.remove();}
+closeFlagWindow();});return false;});$('#flag_close').on('click',closeFlagWindow);};$.fn.ngFlag=function(){$(this).on('click',function(){if($('.nodimming').exists()){PHP.set('nodimming',$('.nodimming'));}
+PHP.set('flag_element_clicker',$(this).attr('id'));$.get(this.href,function(response){if($('.nodimming').exists()){$('.nodimming').removeClass('nodimming');}
+NiGhtBox.replace($(response),439);watchFormPage();NiGhtBox.show();});return false;});};})(jQuery);
