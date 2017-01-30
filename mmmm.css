@@ -10,9 +10,9 @@ footer {
   background-color: #5697ff;
 }
 
-.dropbtn {
+dropbtn {
     background-color: #4CAF50;
-    color: white;
+    color: #5697ff;
     padding: 16px;
     font-size: 16px;
     border: none;
