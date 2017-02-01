@@ -10,6 +10,23 @@
      <div><div/>
   <body> 
   <center>
+    
+    
+    <ul class="main-nav">
+      <li>Soft Skills Project
+        <ul class="dropdown">
+          <li>Communication Skills</li>
+        </ul>
+      </li>
+      
+      <li>Test
+        <ul>
+          <li>Test</li>
+        </ul>
+      </li>
+    </ul>
+    
+    
   <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Soft Skills Project</button>
    <div id="myDropdown" class="dropdown-content">
@@ -20,8 +37,10 @@
     <a href="https://firelevelone.github.io/angerydoggo-project/Teamwork.html">Teamwork</a>
     <a href="https://firelevelone.github.io/angerydoggo-project/Professionalism.html">Professionalism</a>
    </div>
- </div>
+    </div>
+    
  <script>
+   
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -83,8 +102,16 @@ window.onclick = function(event) {
   <p></p>
   <br>
   <p></p>
- 
-    <body/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.main-nav > li').click(function)() {
+          $('.main-nav > li').not(this).find('ul').hide();
+          $(this).find('ul').toggle();
+        });
+      });
+    </script>
+    </body>
   <footer>
     <center><strong>Beta 1.5</strong><center/>
   <footer/>
