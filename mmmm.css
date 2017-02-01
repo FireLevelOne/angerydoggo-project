@@ -48,3 +48,13 @@ footer {
 .dropdown a:hover {background-color: #f1f1f1}
 
 .show {display:block;}
+
+.main-nav li {
+  display: inline-block;
+}  
+
+.main-nav li ul {
+  display: none;
+}
+.main-nav li ul li {
+  display: block;}
