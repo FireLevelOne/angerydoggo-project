@@ -19,7 +19,7 @@ ul {
     cursor: pointer;
 }
 
-ul:hover, .dropbtn:focus {
+ul:hover, ul:focus {
     background-color: #3e8e41;
 }
 
