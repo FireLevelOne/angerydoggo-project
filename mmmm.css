@@ -10,7 +10,7 @@ footer {
   background-color: #5697ff;
 }
 
-.dropbtn {
+ul {
     background-color: #4CAF50;
     color: white;
     padding: 16px;
@@ -19,16 +19,16 @@ footer {
     cursor: pointer;
 }
 
-.dropbtn:hover, .dropbtn:focus {
+ul:hover, .dropbtn:focus {
     background-color: #3e8e41;
 }
 
-.dropdown {
+li {
     position: relative;
     display: inline-block;
 }
 
-.dropdown-content {
+li-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -38,14 +38,14 @@ footer {
     z-index: 1;
 }
 
-.dropdown-content a {
+li-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown a:hover {background-color: #f1f1f1}
+li a:hover {background-color: #f1f1f1}
 
 .show {display:block;}
 
